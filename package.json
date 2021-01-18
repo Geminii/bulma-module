@@ -10,7 +10,9 @@
   },
   "scripts": {
     "dev": "nuxt example",
-    "test": "jest"
+    "lint": "eslint --ext .js,.vue .",
+    "format": "yarn lint --fix",
+    "test": "yarn lint && jest"
   },
   "dependencies": {
     "bulma": "^0.9.1"
@@ -20,6 +22,8 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-typescript": "^7.12.7",
     "@nuxt/test-utils": "^0.1.2",
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "eslint": "^7.18.0",
     "jest": "^26.6.3",
     "nuxt": "^2.14.12"
   }
